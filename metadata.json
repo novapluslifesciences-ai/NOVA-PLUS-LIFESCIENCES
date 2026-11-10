@@ -1,0 +1,6 @@
+{
+  "name": "Nova-Plus Lifesciences",
+  "description": "Advancing Healthcare through Safe & Effective Medicine - Official Corporate Web Portal, Product Lineup, B2B Volume Calculator, and Clinical Pharmacopoeia",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

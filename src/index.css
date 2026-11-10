@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+  h1, h2, h3, .font-display {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* 3D Scene & Matrix Utilities */
+.perspective-1200 {
+  perspective: 1200px;
+}
+
+.perspective-2000 {
+  perspective: 2000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.translate-z-10 {
+  transform: translateZ(10px);
+}
+
+.translate-z-20 {
+  transform: translateZ(20px);
+}
+
+.translate-z-30 {
+  transform: translateZ(30px);
+}
+
+.translate-z-40 {
+  transform: translateZ(40px);
+}
+
+.translate-z-60 {
+  transform: translateZ(60px);
+}
+
+/* Glassmorphism Styles */
+.glass-nav {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.7);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 10px 30px -5px rgba(11, 27, 61, 0.07), 0 4px 6px -2px rgba(11, 27, 61, 0.03);
+}
+
+.glass-panel-dark {
+  background: rgba(11, 27, 61, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Keyframe Drifting & Floating */
+@keyframes floatLayerA {
+  0%, 100% {
+    transform: translateY(0px) rotateX(4deg) rotateY(-6deg) translateZ(30px);
+  }
+  50% {
+    transform: translateY(-16px) rotateX(7deg) rotateY(-3deg) translateZ(45px);
+  }
+}
+
+@keyframes floatLayerB {
+  0%, 100% {
+    transform: translateY(0px) rotateX(6deg) rotateY(12deg) translateZ(15px);
+  }
+  50% {
+    transform: translateY(-22px) rotateX(2deg) rotateY(8deg) translateZ(25px);
+  }
+}
+
+@keyframes floatLayerC {
+  0%, 100% {
+    transform: translateY(0px) rotateX(-4deg) rotateY(-8deg) translateZ(50px);
+  }
+  50% {
+    transform: translateY(-14px) rotateX(-8deg) rotateY(-12deg) translateZ(65px);
+  }
+}
+
+@keyframes gentleDrift {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(0.8deg);
+  }
+}
+
+.animate-float-a {
+  animation: floatLayerA 7s ease-in-out infinite;
+}
+
+.animate-float-b {
+  animation: floatLayerB 9s ease-in-out infinite 1.2s;
+}
+
+.animate-float-c {
+  animation: floatLayerC 6s ease-in-out infinite 0.5s;
+}
+
+.animate-drift {
+  animation: gentleDrift 5s ease-in-out infinite;
+}
+
+/* Category Reactive Glow Auras */
+.aura-syrup-glow {
+  box-shadow: 0 20px 50px -10px rgba(37, 99, 235, 0.35), 0 0 35px rgba(2, 132, 199, 0.2);
+}
+
+.aura-sachet-glow {
+  box-shadow: 0 20px 50px -10px rgba(13, 148, 136, 0.35), 0 0 35px rgba(20, 184, 166, 0.22);
+}
+
+/* High-clarity subtle grid backdrop */
+.medical-grid-bg {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(14, 116, 144, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(14, 116, 144, 0.04) 1px, transparent 1px);
+}
